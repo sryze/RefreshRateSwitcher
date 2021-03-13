@@ -30,9 +30,9 @@ int main(int argc, char **argv)
     _splitpath_s(argv[0], nullptr, 0, nullptr, 0, programName, _MAX_FNAME, nullptr, 0);
 
 	if (argc < 3) {
-        std::cerr << "Usage: " << programName << " <displyaNum> <refreshRate>\n\n"
-            << "displyNum\n"
-            << "\tNumeric index of the display adapter (graphics card) to use: 0, 1, 2... etc.\n\n"
+        std::cerr << "Usage: " << programName << " <displayNum> <refreshRate>\n\n"
+            << "displayNum\n"
+            << "\tNumeric index of the display: 0, 1, 2... etc.\n\n"
             << "refreshRate\n"
             << "\tRefresh rate to use for the display, in hertz. Passing 0 will reset it to the default value.\n\n"
             << "Example: " << programName << " 0 144\n"
