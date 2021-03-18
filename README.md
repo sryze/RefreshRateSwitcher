@@ -1,7 +1,7 @@
 RefreshRateSwitcher
 ===================
 
-This program allows you to change display refresh rate via command line on Windows 7/8/10.
+This program allows you to change the refresh rate of your monitor via command line on Windows 7/8/10+.
 
 Usage:
 
