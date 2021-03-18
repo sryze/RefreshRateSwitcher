@@ -4,7 +4,7 @@ if(POLICY CMP0048)
     cmake_policy(SET CMP0048 NEW)
 endif()
 
-project(RefreshRateSwitcher VERSION 0.1)
+project(RefreshRateSwitcher VERSION 0.1.1)
 
 add_executable(RefreshRateSwitcher main.cpp)
 
