@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <windows.h>
 
 static const char *GetChangeDisplaySettingsErrorMessage(int errorCode)
@@ -30,12 +31,12 @@ int main(int argc, char **argv)
     _splitpath_s(argv[0], nullptr, 0, nullptr, 0, programName, _MAX_FNAME, nullptr, 0);
 
 	if (argc < 3) {
-        std::cerr << "Usage: " << programName << " <displayNum> <refreshRate>\n\n"
-            << "displayNum\n"
+        std::cerr << "Usage:\n\n" << programName << " <displayNum> <refreshRate>\n\n"
+            << "<displayNum>\n"
             << "\tNumeric index of the display: 0, 1, 2... etc.\n\n"
-            << "refreshRate\n"
+            << "<refreshRate>\n"
             << "\tRefresh rate to use for the display, in hertz. Passing 0 will reset it to the default value.\n\n"
-            << "Example: " << programName << " 0 144\n"
+            << "Example:\n\n" << programName << " 0 144"
             << std::endl;
 		return EXIT_FAILURE;
 	}
@@ -100,7 +101,7 @@ int main(int argc, char **argv)
         displayDevice.DeviceName,
         &mode,
         nullptr,
-        0,
+        CDS_UPDATEREGISTRY,
         nullptr);
     if (changeResult != DISP_CHANGE_SUCCESSFUL) {
         std::cerr
