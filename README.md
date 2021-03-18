@@ -6,8 +6,6 @@ This program allows you to change display refresh rate via command line on Windo
 Usage:
 
 ```
-Usage:
-
 RefreshRateSwitcher <displayNum> <refreshRate>
 
 <displayNum>
@@ -15,8 +13,10 @@ RefreshRateSwitcher <displayNum> <refreshRate>
 
 <refreshRate>
         Refresh rate to use for the display, in hertz. Passing 0 will reset it to the default value.
+```
 
 Example:
 
+```
 RefreshRateSwitcher 0 144
 ```
