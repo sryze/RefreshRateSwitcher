@@ -65,7 +65,7 @@ int main(int argc, char **argv)
         }
     }
 
-    std::cout << "Display: " << displayDevice.DeviceString << std::endl;
+    std::cout << "Adapter: " << displayDevice.DeviceString << std::endl;
     std::cout << "Connected monitors: " << std::endl;
 
     for (auto iDevNum = 0; ; iDevNum++) {
@@ -85,10 +85,6 @@ int main(int argc, char **argv)
 
     DEVMODE mode = { 0 };
     mode.dmSize = sizeof(mode);
-    if (!EnumDisplaySettings(displayDevice.DeviceName, 0, &mode)) {
-        std::cerr << "Error: Failed to obtain monitor settings" << std::endl;
-        return EXIT_FAILURE;
-    }
     if (!EnumDisplaySettings(displayDevice.DeviceName, ENUM_CURRENT_SETTINGS, &mode)) {
         std::cerr << "Error: Failed to obtain current monitor settings" << std::endl;
         return EXIT_FAILURE;
