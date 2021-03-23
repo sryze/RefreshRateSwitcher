@@ -3,7 +3,7 @@ RefreshRateSwitcher
 
 This program allows you to dynamically change the refresh rate of your monitor via command line on Windows 7/8/10+.
 
-For example, it can be useful if your cheap-ass monitor makes an annoying squeaky sound when running at the maximum rate.
+For example, it can be useful if your cheap-ass monitor makes an annoying squeaky sound when running at the maximum rate and you want to only use that mode while gaming.
 
 Usage:
 
