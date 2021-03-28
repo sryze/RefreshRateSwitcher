@@ -24,7 +24,7 @@ Example:
 RefreshRateSwitcher 0 144
 ```
 
-Example AutoHotkey script:
+Example AutoHotkey script - bind RefreshRateSwitcher to a global hotkey:
 
 ```autohotkey
 +#G::
