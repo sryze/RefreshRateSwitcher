@@ -6,7 +6,7 @@ endif()
 
 project(RefreshRateSwitcher VERSION 0.1.1)
 
-add_executable(RefreshRateSwitcher main.cpp)
+add_executable(RefreshRateSwitcher src/main.cpp)
 
 install(TARGETS RefreshRateSwitcher RUNTIME DESTINATION .)
 
