@@ -2,6 +2,16 @@
 #include <string>
 #include <windows.h>
 
+static std::string GetProgramName(const std::string &path)
+{
+    auto lastSepPos = path.find_last_of("/\\");
+    if (lastSepPos != std::string::npos) {
+        return path.substr(lastSepPos + 1);
+    } else {
+        return path;
+    }
+}
+
 static const char *GetChangeDisplaySettingsErrorMessage(int errorCode)
 {
     switch (errorCode) {
@@ -27,10 +37,8 @@ static const char *GetChangeDisplaySettingsErrorMessage(int errorCode)
 
 int main(int argc, char **argv)
 {
-    char programName[_MAX_FNAME] = "RefreshRateSwitcher";
-    _splitpath_s(argv[0], nullptr, 0, nullptr, 0, programName, _MAX_FNAME, nullptr, 0);
-
 	if (argc < 3) {
+        auto programName = GetProgramName(argv[0]);
         std::cerr << "Usage:\n\n" << programName << " <displayNum> <refreshRate>\n\n"
             << "<displayNum>\n"
             << "\tNumeric index of the display: 0, 1, 2... etc.\n\n"
